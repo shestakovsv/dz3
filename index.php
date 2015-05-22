@@ -20,10 +20,10 @@ $x=array();
         $x[]=date('d',$value);
         $s[]=date('m',$value);    
     } 
-sort($x);
-sort($s);
-echo "наименьший день в массиве ".$x[0].'<br>';
-echo "наибольший месяц в массиве ".$s[4].'<br>';
+//sort($x);
+//sort($s);
+echo "наименьший день в массиве ".min($x).'<br>';
+echo "наибольший месяц в массиве ".max($s).'<br>';
 
 $selected=array_pop($date);
 echo 'посдедний элемент массива: '.date('d.m.Y H:i:s',$selected).'<br>';
