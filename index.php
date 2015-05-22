@@ -3,12 +3,15 @@ error_reporting(E_ERROR|E_WARNING|E_PARSE|E_NOTICE);
 ini_set('display_errors', 1 );
 header('Content-type: text/html; charset=utf-8');
 
+$time = time();
+// $date[] = rand(1,$time)
+
 $date=array();
-    $date[]=  rand(time(), 1);
-    $date[]=  rand(time(), 1);
-    $date[]=  rand(time(), 1);
-    $date[]=  rand(time(), 1);
-    $date[]=  rand(time(), 1);
+    $date[] = rand(1,$time);
+    $date[] = rand(1,$time);
+    $date[] = rand(1,$time);
+    $date[] = rand(1,$time);
+    $date[] = rand(1,$time);
     print_r($date);
     sort($date);
     echo date('d.m.Y',$date[0]).'<br>';
